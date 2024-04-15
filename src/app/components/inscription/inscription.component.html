@@ -1,0 +1,28 @@
+<div class="container">
+    <h3><u>Inscription</u></h3>
+   
+    <form autocomplete="off" #form="ngForm" (submit)="onSubmit(form)">
+        
+        <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" class="form-control" ngModel name="email"  [(ngModel)] ="login.email"  #email="ngModel" required minlength="5" maxlength="20">
+            <div class="alert alert-danger" *ngIf="email.touched && !email.valid">
+                <div *ngIf="email.errors?.['required']">Email is required</div> 
+                <div *ngIf="email.errors?.['minlength']">minimum 5 characters</div> 
+                <div *ngIf="email.errors?.['maxlength']">maximum 20 characters</div> 
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" class="form-control" ngModel name="password" [(ngModel)]="login.password" name="password" #password="ngModel" required minlength="8" maxlength="20">
+            <div class="alert alert-danger" *ngIf="password.touched && !password.valid">
+                <div *ngIf="password.errors?.['required']">Password is required</div>
+                <div *ngIf="password.errors?.['minlength']">Password must be at least 8 characters</div>
+                <div *ngIf="password.errors?.['maxlength']">Password cannot exceed 20 characters</div>
+            </div>
+        </div>
+        <br>
+        <button class="btn btn-danger" type="submit">Send</button>
+    </form>
+</div>

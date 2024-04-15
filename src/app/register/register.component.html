@@ -1,0 +1,33 @@
+
+<div class="container-fluid">
+
+   <div class ="row ">
+    <button type ="button" class ="btn btn-link" (click)="GoToUser()">Go To User</button>
+    </div>
+
+
+
+
+
+     <div class ="row">
+        <table class="table">
+            <tr>
+                <th> <i class="fa fa-user fa-lg" aria-hidden="true"></i>Name</th>
+                <th>code</th>
+                <th>country</th>
+                <th>Actions</th>
+            </tr>
+            <tr *ngFor="let item of dataList">
+                <td>{{item.name}}</td>
+                <td>{{item.code}}</td>
+                <td>{{item.country}}</td>
+                <td><i class="fa fa-forward" aria-hidden="true"></i></td>
+            </tr>
+
+        </table>
+        
+           
+     </div>
+
+
+</div>

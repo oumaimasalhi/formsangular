@@ -1,0 +1,8 @@
+.container {
+    width: 500px;
+    margin-top: 150px; /* Vous pouvez ajuster la marge supérieure selon vos besoins */
+    margin-left: auto; /* Centrer horizontalement */
+    margin-right: auto; /* Centrer horizontalement */
+    padding: 40px;
+    border: 2px solid black;
+}

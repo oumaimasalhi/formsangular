@@ -1,0 +1,47 @@
+  <div class="container">
+    <h2>CRUD Fruits</h2>
+  
+    <form>
+      <div class="form-group">
+        <label for="name">Nom:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="quantity">Quantité:</label>
+        <input type="number" id="quantity" name="quantity" required>
+      </div>
+      <div class="form-group">
+        <label for="price">Prix:</label>
+        <input type="number" id="price" name="price" required>
+      </div>
+      <br>
+      
+      <button type="submit" class="btn btn-success">Enregistrer</button>
+
+      
+    </form>
+    <br>
+    <!-- Tableau pour afficher les fruits -->
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Nom</th>
+          <th>Quantité</th>
+          <th>Prix</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of table">
+          <td>{{ item.productName }}</td>
+          <td>{{ item.productQuantity }}</td>
+          <td>{{ item.productPrice }}</td>
+           <td>
+            <button class="btn btn-success">Modifier</button>
+            <button class="btn btn-danger">Supprimer</button>
+           </td>
+        </tr>
+       
+      </tbody>
+    </table>
+  </div>
